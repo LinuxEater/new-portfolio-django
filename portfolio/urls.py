@@ -4,5 +4,5 @@ from django.http import HttpResponse
 
 
 urlpatterns = [
-    path('', home),  # Include the portfolio app URLs
+    path('', home, name='home'),  # Include the portfolio app URLs
 ]
