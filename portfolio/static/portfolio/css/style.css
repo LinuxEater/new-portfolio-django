@@ -1,0 +1,20 @@
+body{
+    background-color: #2f3031 !important; /* Light background color */
+    color: #e8ebee !important; /* Dark text color for better contrast */
+    font-family: Arial, sans-serif !important; /* Default font */
+}
+
+.custom-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding-top: 1rem;
+  border-bottom: #171718 solid 3px; /* borda superior */
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  backdrop-filter: blur(4px); /* leve desfoque se quiser efeito moderno */
+}
+
