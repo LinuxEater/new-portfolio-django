@@ -13,8 +13,9 @@ body{
   padding-top: 1rem;
   border-bottom: #171718 solid 3px; /* borda superior */
   padding-bottom: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   backdrop-filter: blur(4px); /* leve desfoque se quiser efeito moderno */
 }
 
