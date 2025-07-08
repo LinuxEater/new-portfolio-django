@@ -16,6 +16,7 @@ html {
 
 :root{
     --color-background-dark: #000000;
+    --color-gray: #7b7b8b;
     --color-white: #fff;
     --color-green: #0fb639;
 }
@@ -59,15 +60,65 @@ html {
 }
 
 .hero__title{
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-transform: uppercase;
-    color: var(--color-green);
+    text-transform: capitalize;
+    color: #ffffff; /* branco puro */
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 15px #a0eaff;
 }
 
+.hero__text{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    letter-spacing: .25rem;
+    color: #ffffff; /* branco puro */
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 15px #a0eaff;
+}
+
+.typewriter-container {
+  font-weight: 600;
+  font-size: 3.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.fixed-text {
+  color: #ffffff; /* branco puro */
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 15px #a0eaff; /* glow branco-azulado */ /* branco */
+}
+
+.typewriter {
+  color: var(--color-green); /* verde */
+  border-right: 3px solid var(--color-green);
+  padding-left: 0.3rem;
+  animation: blinkCaret 0.75s step-end infinite;
+}
+
+@keyframes blinkCaret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--color-green); }
+}
+
+
+
 /*-- skills */
-#skills h2{
+#skills{
+    background-color: #252626; /* Um pouco mais escuro que o body */
+    padding: 2rem 0;
+    color: #e8ebee; /* Cor do texto */
+}
+
+#skills h2{  /* Um pouco mais escuro que o body, mas mantém harmonia */
     text-align: center;
     padding-top: 1rem;
     padding-bottom: .75rem;

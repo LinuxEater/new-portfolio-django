@@ -52,3 +52,52 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 
   // Mostrar todos inicialmente com animação
   showProjects('all');
+
+
+// Typewriter effect for hero section
+const roles = [
+  "Full Stack Developer",
+  "UX/UI Designer",
+  "Back End Developer",
+  "Software Engineer",
+  "Front End Developer"
+];
+
+const typewriterElement = document.getElementById("typewriter");
+
+let wordIndex = 0;
+let charIndex = 0;
+let currentText = "";
+let isDeleting = false;
+let typingSpeed = 100;
+let deletingSpeed = 50;
+let pauseTime = 1500;
+
+function type() {
+  const fullText = roles[wordIndex];
+  
+  if (isDeleting) {
+    currentText = fullText.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    currentText = fullText.substring(0, charIndex + 1);
+    charIndex++;
+  }
+
+  typewriterElement.textContent = currentText;
+
+  if (!isDeleting && charIndex === fullText.length) {
+    setTimeout(() => {
+      isDeleting = true;
+      type();
+    }, pauseTime);
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % roles.length;
+    setTimeout(type, typingSpeed);
+  } else {
+    setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+  }
+}
+
+type();
