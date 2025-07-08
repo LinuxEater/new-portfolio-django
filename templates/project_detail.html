@@ -1,5 +1,34 @@
 {% extends 'base.html' %}
-{% load static %}
+
 {% block content %}
+<section class="project-detail">
+  <h1 class="project-title">{{ project.title }}</h1>
+
+  <div class="project-media">
+    <img src="{{ project.image.url }}" alt="" class="project-image" />
+
+    {% if project.video %}
+      <video class="project-video" controls>
+        <source src="{{ project.video.url }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    {% endif %}
+  </div>
+
+  <p class="project-description">{{ project.description }}</p>
+
+  <h3>Technologies Used:</h3>
+  <ul class="tech-list">
+    {% for tech in technologies_list %}
+      <li class="tech-badge">{{ tech|cut:" " }}</li>
+    {% endfor %}
+</ul>
+
+  <p><strong>Project Date:</strong> {{ project.date|date:"F j, Y" }}</p>
+
+  <p><a href="{{ project.url }}" target="_blank" class="project-link">Visit Project</a></p>
+</section>
 
 {% endblock %}
+
+

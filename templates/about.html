@@ -1,4 +1,38 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
+<section class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="{% static 'portfolio/img/img7.jpg' %}" alt="Moises Souza">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I'm <strong>Moises Souza</strong>, a passionate and versatile <strong>Full Stack Developer</strong> focused on building meaningful digital solutions. My main areas of expertise include <strong>web development</strong>, <strong>automation</strong>, <strong>bots</strong>, and <strong>web scraping</strong>, using technologies like <strong>Django</strong>, <strong>React</strong>, <strong>Python</strong>, <strong>Node.js</strong>, and <strong>Next.js</strong>.
+      </p>
+      <p>
+        I’m currently studying <strong>Computer Engineering</strong> and plan to earn a second degree in <strong>Mechanical Engineering</strong>. My academic journey will continue through postgraduate studies in <strong>Software Engineering</strong>, <strong>Cybersecurity</strong>, <strong>Electrical Engineering</strong>, and <strong>Digital Marketing</strong>.
+      </p>
+      <p>
+        My personality is driven by curiosity, discipline, and long-term vision. I constantly explore new technologies and deepen my understanding of modern software development, including <strong>UI/UX design</strong>, <strong>backend architecture</strong>, and <strong>high-performance systems</strong>.
+      </p>
+      <p>
+        Outside of development, I enjoy watching <strong>anime</strong>, listening to <strong>music</strong>, and reading extensively about <strong>cybersecurity</strong> and <strong>programming</strong>. I’m currently focused on improving my understanding of <strong>algorithms and data structures</strong> to strengthen my problem-solving skills.
+      </p>
+      <p>
+        I'm also building a personal <strong>software house</strong>, offering freelance services for custom websites, automations, and bots. At the same time, I’m creating a strong international portfolio and learning new languages — I'm fluent in English, studying Japanese, and currently learning Norwegian.
+      </p>
+      <p>
+        As a self-taught night owl, I strive to build clean, scalable, and impactful software while continuously growing as a developer and professional.
+      </p>
+      <div class="about-buttons">
+        <a href="https://github.com/LinuxEater" target="_blank" class="btn btn-github">GitHub</a>
+        <a href="{% static 'portfolio/files/cv.pdf' %}" download class="btn btn-cv">Download CV</a>
+    </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

@@ -1,4 +1,54 @@
 {% extends 'base.html' %}
-{% block content %}
 
+{% block content %}
+<section class="budget-section">
+  <div class="budget-card">
+    
+    <h2><i class="fas fa-file-invoice-dollar"></i> Request a Budget</h2>
+    <p>Fill in the form below and I’ll get back to you shortly. No obligation, totally free.</p>
+
+    <!-- Lista de instruções -->
+    <ul class="instructions-list">
+      <li>Describe clearly what you need (e.g., a landing page, a bot for Instagram...)</li>
+      <li>Include any deadlines or preferred timelines.</li>
+      <li>Mention any specific technologies if you have a preference.</li>
+      <li>Let me know your budget range (optional).</li>
+    </ul>
+
+
+    <form method="post" action="#">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="project_type">Project Type</label>
+        <select id="project_type" name="project_type" required>
+          <option value="">Select...</option>
+          <option value="website">Website</option>
+          <option value="automation">Automation / Bot</option>
+          <option value="mobile_app">Mobile App</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Project Description</label>
+        <textarea id="description" name="description" rows="5" placeholder="Briefly describe your idea or needs" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        <i class="fas fa-paper-plane"></i> Send Request
+      </button>
+    </form>
+  </div>
+</section>
 {% endblock %}
