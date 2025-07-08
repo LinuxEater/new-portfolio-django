@@ -15,7 +15,7 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-transparent navbar-dark custom-navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Meu Portfólio</a>
+      <a class="navbar-brand" href="#">Moises.Dev</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,10 +42,7 @@
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 border-light bg-dark text-white" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-light" type="submit">Buscar</button>
-        </form>
+        <a class="btn btn-outline-danger">HIRE ME</a>
       </div>
     </div>
   </nav>
@@ -65,7 +62,7 @@
     </div>
 </section>
 
-<section id="skills" class="skills-dev py-5" style="background-color:#2f3031; color:#e8ebee;">
+<section id="skills" class="skills-dev py-5" style="color:#e8ebee;">
   <div class="container">
     <h2 class="text-center mb-4">Skills</h2>
     <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
@@ -177,14 +174,169 @@
 
 
 <section id="projects" class="projects">
-    <div class="container">
-        <h1 class="text-center">My projects</h1>
-        <h3 class="text-center">Featured Projects</h3>
+    <h1 class="text-center my_projects_titles">My projects</h1>
+    <h3 class="text-center featured_projects_title">Featured Projects</h3>
+
+    <div class="container-display">
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
+            <h3>Explore The World</h3>
+        </div>
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
+            <h3>Wild Forest</h3>
+        </div>
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80')">
+            <h3>Sunny Beach</h3>
+        </div>
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80')">
+            <h3>City on Winter</h3>
+        </div>
+        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
+            <h3>Mountains - Clouds</h3>
+        </div>
     </div>
-<section></section>
+</section>
 
+<section id="projects" class="projects-section">
+  <h2 class="text-center my_projects_titles">My Projects</h2>
 
-        
+  <!-- Filter Buttons -->
+  <div class="category-filter text-center mb-4">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="fullstack">Full Stack</button>
+    <button class="filter-btn" data-category="backend">Back End</button>
+    <button class="filter-btn" data-category="frontend">Front End</button>
+    <button class="filter-btn" data-category="mobile">Mobile</button>
+    <button class="filter-btn" data-category="scraping">RPA/Web Scraping</button>
+    <button class="filter-btn" data-category="bots">Bots</button>
+  </div>
+
+  <!-- Project Cards -->
+  <div class="project-grid container">
+    <div class="project-card" data-category="fullstack">
+      <h4>Django E-commerce</h4>
+    </div>
+    <div class="project-card" data-category="frontend">
+      <h4>React Portfolio</h4>
+    </div>
+    <div class="project-card" data-category="backend">
+      <h4>API with Node.js and PostgreSQL</h4>
+    </div>
+    <div class="project-card" data-category="mobile">
+      <h4>React Native Store App</h4>
+    </div>
+    <div class="project-card" data-category="scraping">
+      <h4>Web Scraper with BeautifulSoup</h4>
+    </div>
+    <div class="project-card" data-category="bots">
+      <h4>Telegram Bot with Python</h4>
+    </div>
+    <div class="project-card" data-category="scraping">
+      <h4>RPA Automation with Selenium</h4>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services-section">
+  <div class="container">
+    <h2 class="section-title text-center">My Services</h2>
+    <div class="row">
+      <!-- Serviço 1 -->
+      <div class="col-md-4 service-card">
+        <div class="service-icon">
+          <img src="https://img.icons8.com/ios-filled/50/code.png" alt="Web Development">
+        </div>
+        <h4 class="service-title">Web Development</h4>
+        <p class="service-desc">
+          Full Stack websites and systems using Django, React, HTML, CSS, JS and more. Clean, responsive and fast.
+        </p>
+      </div>
+
+      <!-- Serviço 2 -->
+      <div class="col-md-4 service-card">
+        <div class="service-icon">
+          <img src="https://img.icons8.com/ios-filled/50/robot.png" alt="Automation">
+        </div>
+        <h4 class="service-title">Automation & RPA</h4>
+        <p class="service-desc">
+          Automate repetitive tasks with Python, Selenium, and Bots. Web scraping and task scheduling included.
+        </p>
+      </div>
+
+      <!-- Serviço 3 -->
+      <div class="col-md-4 service-card">
+        <div class="service-icon">
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/iphone.png" alt="iphone"/>
+        </div>
+        <h4 class="service-title">Mobile Development</h4>
+        <p class="service-desc">
+          Mobile apps with React Native. Performance, UI and API integration for iOS and Android.
+        </p>
+      </div>
+
+      <!-- Serviço 4: UI/UX Design -->
+    <div class="col-md-4 service-card">
+    <div class="service-icon">
+        <img src="https://img.icons8.com/ios-filled/50/design--v1.png" alt="UI/UX Design">
+    </div>
+    <h4 class="service-title">UI/UX Design</h4>
+    <p class="service-desc">
+        Modern, intuitive and responsive interfaces. Focused on user experience, usability, and accessibility across platforms.
+    </p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-card mx-auto">
+      <h2>Need a website, automation, or custom bot?</h2>
+      <p>
+        Turn your idea into a powerful solution! Request a free quote with no obligation or let's talk about how I can help.
+      </p>
+      <a href="/budget" class="btn btn-primary contact-btn">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h4>Moises Souza</h4>
+      <p>Building modern websites, automations, and digital solutions.</p>
+    </div>
+
+    <div class="footer-links">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h5>Connect</h5>
+      <div class="social-icons">
+        <a href="https://github.com/LinuxEater" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/30/github.png" alt="GitHub" />
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/30/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="mailto:moisessouzasantos001@gmail.com">
+          <img src="https://img.icons8.com/ios-filled/30/email.png" alt="Email" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {% now "Y" %} Moises Souza. All rights reserved.</p>
+  </div>
+</footer>
+
         <script src="{% static 'portfolio/js/script.js' %}" defer></script>
     </body>
 </html>
