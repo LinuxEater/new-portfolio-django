@@ -1,7 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: #2f3031 !important; /* Light background color */
     color: #e8ebee !important; /* Dark text color for better contrast */
     font-family: Arial, sans-serif !important; /* Default font */
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+:root{
+    --color-background: #030207;
+    --color-white: #fff;
+    --color-green: #0fb639;
 }
 
 .custom-navbar {
@@ -18,4 +34,38 @@ body{
   padding-right: 2.5rem;
   backdrop-filter: blur(4px); /* leve desfoque se quiser efeito moderno */
 }
+
+
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color-background));
+    position: relative;
+    min-height: 100vh;
+}
+
+.hero__background{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -10;
+}
+
+.hero__foreground{
+    color: var(--color-white);
+    text-align: center;
+    padding-top: 45vh;
+    padding: 10%;
+}
+
+.hero__title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--color-green);
+}
+
+/*-- skills section */
+
 

@@ -49,58 +49,142 @@
       </div>
     </div>
   </nav>
-</header><header>
-  <nav class="navbar navbar-expand-lg bg-transparent navbar-dark custom-navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Meu Portfólio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Projetos</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Mais
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Sobre</a></li>
-              <li><a class="dropdown-item" href="#">Contato</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Outro</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 border-light bg-dark text-white" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-light" type="submit">Buscar</button>
-        </form>
-      </div>
-    </div>
-  </nav>
 </header>
 
-<section id="hero" class="d-flex align-items-center">
-    <div class="container">
-        <div class="hero">
-            
-        <div/>
-        <div class="hero_foreground">
-            
-        <div/>
-
+<section id="hero" class="hero d-flex align-items-center">
+    <video class="hero__background" autoplay muted loop>
+        <source src="{% static 'portfolio/video/vid7.mp4' %}" type="video/mp4" />
+    </video>
+    <div class="hero__foreground">
+        <h1 class="hero__title">Moises Souza</h1>
+        <p class="hero__text">
+            Olá, eu sou Moises Souza, um desenvolvedor web apaixonado por criar experiências digitais incríveis. 
+            Aqui você encontrará uma seleção dos meus projetos mais recentes e interessantes. 
+            Sinta-se à vontade para explorar e entrar em contato se tiver alguma dúvida ou quiser discutir uma possível colaboração.
+        </p>
     </div>
-
 </section>
+
+<section id="skills" class="skills-dev py-5" style="background-color:#2f3031; color:#e8ebee;">
+  <div class="container">
+    <h2 class="text-center mb-4">Skills</h2>
+    <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center gap-5 flex-wrap">
+            <div class="text-center mx-3">
+              <img width="50" height="50" src="https://img.icons8.com/windows/100/nodejs.png" alt="nodejs"/>
+              <p>Node.js</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/html-5--v1.png" alt="HTML5" />
+              <p>HTML5</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/css3.png" alt="CSS3" />
+              <p>CSS3</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/react-native.png" alt="React.js" />
+              <p>React.js</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center gap-5 flex-wrap">
+            <div class="text-center mx-3">
+              <img width="50" height="50" src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/50/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-filled-tal-revivo.png" alt="external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-filled-tal-revivo"/>
+              <p>Vue.js</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/django.png" alt="Django" />
+              <p>Django</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/python.png" alt="Python" />
+              <p>Python</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/flask.png" alt="Flask" />
+              <p>Flask</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center gap-5 flex-wrap">
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/mysql-logo.png" alt="MySQL" />
+              <p>MySQL</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/postgreesql.png" alt="PostgreSQL" />
+              <p>PostgreSQL</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/sqlite.png" alt="SQLite" />
+              <p>SQLite</p>
+            </div>
+            <div class="text-center mx-3">
+              <img width="50" height="50" src="https://img.icons8.com/color/100/mongodb.png" alt="mongodb"/>
+              <p>MongoDB</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center gap-5 flex-wrap">
+            <div class="text-center mx-3">
+              <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/selenium-test-automation.png" alt="selenium-test-automation"/>
+              <p>Selenium</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/java-coffee-cup-logo.png" alt="Java" />
+              <p>Java</p>
+            </div>
+            <div class="text-center mx-3">
+              <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/can-soup.png" alt="can-soup"/>
+              <p>BeautifulSoup</p>
+            </div>
+            <div class="text-center mx-3">
+              <img src="https://img.icons8.com/ios-filled/50/linux.png" alt="Linux" />
+              <p>Linux</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles do Carousel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#skillsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#skillsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="projects" class="projects">
+    <div class="container">
+        <h1 class="text-center">My projects</h1>
+        <h3 class="text-center">Featured Projects</h3>
+    </div>
+<section></section>
+
+
         
-        <script src="" async defer></script>
+        <script src="{% static 'portfolio/js/script.js' %}" defer></script>
     </body>
 </html>
