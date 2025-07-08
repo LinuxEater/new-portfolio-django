@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dev Souza</title>
+        <meta name="description" content="">
+        <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios/50/developer--v1.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+    </head>
+    <body>
+<header>
+  <nav class="navbar navbar-expand-lg bg-transparent navbar-dark custom-navbar sticky-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Moises.Dev</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#hero">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projetos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mais
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Sobre</a></li>
+              <li><a class="dropdown-item" href="#">Contato</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Outro</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a class="btn btn-outline-success">HIRE ME</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+
+<footer id="site-footer" class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h4>Moises Souza</h4>
+      <p>Building modern websites, automations, and digital solutions.</p>
+    </div>
+
+    <div class="footer-links">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h5>Connect</h5>
+      <div class="social-icons">
+        <a href="https://github.com/LinuxEater" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/30/github.png" alt="GitHub" />
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/30/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="mailto:moisessouzasantos001@gmail.com">
+          <img src="https://img.icons8.com/ios-filled/30/email.png" alt="Email" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {% now "Y" %} Moises Souza. All rights reserved.</p>
+  </div>
+</footer>
+
+        <script src="{% static 'portfolio/js/script.js' %}" defer></script>
+    </body>
+</html>
