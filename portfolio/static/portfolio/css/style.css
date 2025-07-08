@@ -28,12 +28,27 @@ html {
   width: 100%;
   z-index: 100;
   padding-top: 1rem;
-  border-bottom: #171718 solid 3px; /* borda superior */
   padding-bottom: 1rem;
-  padding-top: 1rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  backdrop-filter: blur(4px); /* leve desfoque se quiser efeito moderno */
+  backdrop-filter: blur(4px);
+  transition: top 0.3s ease;
+}
+
+/* Gradiente como borda */
+.custom-navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, #575857, transparent);
+  pointer-events: none;
+}
+
+.custom-navbar.sticky {
+  position: fixed;
 }
 
 
@@ -64,11 +79,11 @@ html {
     font-weight: 700;
     margin-bottom: 1rem;
     text-transform: capitalize;
-    color: #ffffff; /* branco puro */
+    color: #1a1818; /* branco puro */
     text-shadow:
         0 0 5px #ffffff,
         0 0 10px #ffffff,
-        0 0 15px #a0eaff;
+        0 0 15px #cbe4eb;
 }
 
 .hero__text{
@@ -90,18 +105,22 @@ html {
 }
 
 .fixed-text {
-  color: #ffffff; /* branco puro */
-  text-shadow:
-    0 0 5px #ffffff,
-    0 0 10px #ffffff,
-    0 0 15px #a0eaff; /* glow branco-azulado */ /* branco */
+  color: #1a1818; /* branco puro */
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 15px #cbe4eb; /* glow branco-azulado */ /* branco */
 }
 
 .typewriter {
-  color: var(--color-green); /* verde */
-  border-right: 3px solid var(--color-green);
+  color: var(--color-gray); /* verde */
+  border-right: 3px solid var(--color-gray);
   padding-left: 0.3rem;
   animation: blinkCaret 0.75s step-end infinite;
+  text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 15px #cbe4eb;
 }
 
 @keyframes blinkCaret {

@@ -101,3 +101,35 @@ function type() {
 }
 
 type();
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+}); 
+
+// scroll navbar when reachs the footer
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".custom-navbar");
+  const footer = document.getElementById("site-footer");
+
+  function updateNavbarPosition() {
+    const footerTop = footer.getBoundingClientRect().top;
+    const navbarHeight = navbar.offsetHeight;
+
+    if (footerTop <= navbarHeight + 10) {
+      // Remove posição fixa ao encostar no footer
+      navbar.classList.remove("sticky");
+    } else {
+      // Mantém posição fixa
+      navbar.classList.add("sticky");
+    }
+  }
+
+  window.addEventListener("scroll", updateNavbarPosition);
+});
