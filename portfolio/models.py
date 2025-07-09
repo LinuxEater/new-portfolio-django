@@ -15,6 +15,7 @@ class Project(models.Model):
         ]
     
     title = models.CharField(max_length=200)
+    short_description = models.CharField(max_length=200, blank=True, null=True)
     description = models.TextField(max_length=1000)
     image = models.ImageField(upload_to='projects/')
     video = models.FileField(upload_to='projects/videos/', blank=True, null=True)
