@@ -318,7 +318,11 @@ html {
 }
 
 .project-card {
-  display: none; /* Oculta inicialmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  height: 100%; 
+  min-height: 380px;
   width: 250px;
   background-color: #1f1f1f;
   color: #e8ebee;
@@ -336,6 +340,38 @@ html {
 .project-card:hover {
   transform: scale(1.03);
 }
+
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(15, 182, 57, 0.3);
+}
+
+.project-description {
+  font-size: 0.95rem;
+  margin: 10px 0;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.project-button {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #0fb639;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #0ca530;
+}
+
 
 /* services section */
 
