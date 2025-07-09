@@ -19,6 +19,8 @@ class Project(models.Model):
     image = models.ImageField(upload_to='projects/')
     video = models.FileField(upload_to='projects/videos/', blank=True, null=True)
     technologies = models.CharField(max_length=200)
+    category = models.CharField(max_length=50, choices=TYPE_CHOICES, null=True, blank=True)
+    url_github = models.URLField(blank=True, null=True)
     date = models.DateField()
     url = models.URLField()
     is_featured = models.BooleanField(default=False)
