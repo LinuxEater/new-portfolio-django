@@ -16,7 +16,7 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-transparent navbar-dark custom-navbar sticky-navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Moises.Dev</a>
+      <a class="navbar-brand" href="#home">Moises.Dev</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,26 +24,31 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#hero">Início</a>
+            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#projects">Projetos</a>
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Budgets</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Mais
+              More
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Sobre</a></li>
-              <li><a class="dropdown-item" href="#">Contato</a></li>
+              <li><a class="dropdown-item" href="{% url 'about' %}">About</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Outro</a></li>
+              <li><a class="dropdown-item" href="https://github.com/LinuxEater" target="_blank" >GitHub</a></li>
             </ul>
           </li>
         </ul>
-        <a class="btn btn-outline-success">HIRE ME</a>
+        <a class="btn btn-outline-success" href="{% url 'budget' %}" >HIRE ME</a>
       </div>
     </div>
   </nav>
@@ -183,26 +188,23 @@
     <h3 class="text-center featured_projects_title">Featured Projects</h3>
 
     <div class="container-display">
-        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
-            <h3>Explore The World</h3>
-        </div>
-        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
-            <h3>Wild Forest</h3>
-        </div>
-        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80')">
-            <h3>Sunny Beach</h3>
-        </div>
-        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80')">
-            <h3>City on Winter</h3>
-        </div>
-        <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
-            <h3>Mountains - Clouds</h3>
-        </div>
+      {% for feat in featured_projects %}
+        {% if feat %}
+          <div class="panel" style="background-image: url('{{ feat.image.url }}');">
+            <p>{{ feat.description }}</p>  
+            <a href="{% url 'project_detail' feat.id %}">
+              <h3>{{ feat.title }}</h3>
+            </a>
+          </div>
+        {% else %}
+          <p>No Projects Available</p>
+        {% endif %}
+      {% endfor %}
     </div>
 </section>
 
 <section id="projects" class="projects-section">
-  <h2 class="text-center my_projects_titles">My Projects</h2>
+  <h2 class="text-center my_projects_titles">Custom Projects</h2>
 
   <!-- Filter Buttons -->
   <div class="category-filter text-center mb-4">
@@ -299,7 +301,7 @@
       <p>
         Turn your idea into a powerful solution! Request a free quote with no obligation or let's talk about how I can help.
       </p>
-      <a href="/budget" class="btn btn-primary contact-btn">Get a Free Quote</a>
+      <a href="{% url 'budget' %}" class="btn btn-primary contact-btn">Get a Free Quote</a>
     </div>
   </div>
 </section>

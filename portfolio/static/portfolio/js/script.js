@@ -133,3 +133,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", updateNavbarPosition);
 });
+
+// nav brand
+
+const navBrand = document.querySelector('.navbar-brand');
+if (navBrand) {
+  navBrand.addEventListener('click', function(event) {
+    event.preventDefault();
+    alert("Lets change the word together!");
+  });
+}

@@ -7,8 +7,10 @@ from django.contrib import messages
 # Create your views here.
 
 def home(request):
+    featured_projects = Project.objects.filter(is_featured=True)
     projects = Project.objects.all()
     context = {
+        'featured_projects': featured_projects,
         'projects': projects,
     }
     return render(request, 'home.html', context)

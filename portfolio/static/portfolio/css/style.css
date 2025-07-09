@@ -15,7 +15,8 @@ html {
 }
 
 :root{
-    --color-background-dark: #000000;
+    --color-background-dark: #1d1c1c;
+    --color-background-dark-ultra: #000000;
     --color-gray: #7b7b8b;
     --color-white: #fff;
     --color-green: #0fb639;
@@ -35,6 +36,10 @@ html {
   transition: top 0.3s ease;
 }
 
+.custom-navbar .nav-link {
+  font-size: 1.1rem !important; 
+}
+
 /* Gradiente como borda */
 .custom-navbar::after {
   content: '';
@@ -52,12 +57,13 @@ html {
 }
 
 
+/* hero section- apresentation */
 .hero{
     background: linear-gradient(
     to bottom, 
-    rgba(0, 0, 0, 0.1) 0%,      /* quase transparente no topo */
-    rgba(0, 0, 0, 0.7) 70%,     /* mais escuro perto do meio/baixo */
-    rgba(0, 0, 0, 0.9) 100%     /* quase preto no fundo */
+    rgba(0, 0, 0, 0.1) 0%,      
+    rgba(0, 0, 0, 0.7) 70%,     
+    rgba(0, 0, 0, 0.9) 100%     
   );
     position: relative;
     min-height: 100vh;
@@ -130,19 +136,19 @@ html {
 
 @keyframes blinkCaret {
   from, to { border-color: transparent; }
-  50% { border-color: var(--color-green); }
+  50% { border-color: var(--color-gray); }
 }
 
 
 
 /*-- skills */
 #skills{
-    background-color: #252626; /* Um pouco mais escuro que o body */
+    background-color: #252626; 
     padding: 2rem 0;
-    color: #e8ebee; /* Cor do texto */
+    color: #e8ebee; 
 }
 
-#skills h2{  /* Um pouco mais escuro que o body, mas mantém harmonia */
+#skills h2{  
     text-align: center;
     padding-top: 1rem;
     padding-bottom: .75rem;
@@ -153,12 +159,12 @@ html {
 
 /*-- panel expanding */
 .container-display{
-display: flex;
+  display: flex;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente (se houver altura definida no container) */
   padding: 30px;
   width: 90vw;
-  margin: 0 auto; /
+  margin: 0 auto; 
 }
 
 
@@ -174,23 +180,74 @@ display: flex;
   margin: 10px;
   position: relative;
   transition: all 700ms ease-in;
+  overflow: hidden;
 }
 
-.panel h3 {
-  font-size: 35px;
+.panel::before {
+  content: "";
   position: absolute;
-  text-decoration: underline;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+  z-index: 1;
+  transition: background 0.5s ease;
+}
+
+/* Remove o gradiente se tiver classe .active */
+.panel.active::before {
+  background: none;
+}
+
+
+.panel h3 {
+  color: var(--color-background-dark-ultra);
+  font-size: 40px;
+  position: absolute;
   bottom: 20px;
   left: 20px;
   margin: 0;
   opacity: 0;
 }
 
+.panel p{
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+  font-size: 18px;
+  margin: 0;
+  opacity: 0;
+  display: none;
+
+  /* Centralizar */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%; /* para limitar largura e evitar overflow */
+
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.panel a {
+  padding: 10px 20px;
+}
+
+/* Quando o card estiver aberto, mostre os <p> e <a> */
+.panel.active p,
+.panel.active a {
+  opacity: 1;
+  display: block;
+}
+
 .panel.active{
     flex: 10;
 }
 
-.panel.active h3{
+.panel.active h3,p,a{
+    color: var(--color-background-dark-ultra);
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
 }
@@ -208,11 +265,13 @@ display: flex;
 
 .my_projects_titles{
     padding-top: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
 }
 
 .featured_projects_title{
+    margin-top: 1rem;
     padding-top: 1rem;
     font-weight: 700;
     text-transform: capitalize;
