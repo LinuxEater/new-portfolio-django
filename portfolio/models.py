@@ -3,6 +3,17 @@ from django.db import models
 # Create your models here.
 
 class Project(models.Model):
+    TYPE_CHOICES = [
+        ('fullstack', 'fullstack'),
+        ('backend', 'backend'),
+        ('frontend', 'frontend'),
+        ('mobile', 'mobile'),
+        ('scraping', 'scraping'),
+        ('bots', 'bots'),
+        ('data-analysis', 'data-analysis'),
+        ('cybersecurity', 'cybersecurity'),
+        ]
+    
     title = models.CharField(max_length=200)
     description = models.TextField(max_length=1000)
     image = models.ImageField(upload_to='projects/')

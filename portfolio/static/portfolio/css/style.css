@@ -156,6 +156,14 @@ html {
     text-transform: capitalize;
 }
 
+#skills .text-center img {
+  transition: transform 0.3s ease;
+}
+
+#skills .text-center img:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
 
 /*-- panel expanding */
 .container-display{
