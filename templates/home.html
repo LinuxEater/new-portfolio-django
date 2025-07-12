@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
     </head>
     <body>
+
 <header>
   <nav class="navbar navbar-expand-lg bg-transparent navbar-dark custom-navbar sticky-navbar">
     <div class="container-fluid">
@@ -165,7 +166,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <!-- Controles do Carousel -->
@@ -186,7 +186,6 @@
 <section id="projects" class="projects">
     <h1 class="text-center my_projects_titles">My projects</h1>
     <h3 class="text-center featured_projects_title">Featured Projects</h3>
-
     <div class="container-display">
       {% for feat in featured_projects %}
         {% if feat %}
@@ -283,9 +282,7 @@
       <p class="project-description">Port Scanner feito com Python com os modulo requests e socket. Usado para identificar portas abertas nos Hosts</p>
       <a href="/projects/data-analysis-dashboard" class="project-button">Ver detalhes</a>
   </div>
-
 </div>
-
 </section>
 
 <section id="services" class="services-section">
@@ -388,7 +385,6 @@
     <p>&copy; {% now "Y" %} Moises Souza. All rights reserved.</p>
   </div>
 </footer>
-
         <script src="{% static 'portfolio/js/script.js' %}" defer></script>
     </body>
 </html>
