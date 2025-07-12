@@ -737,7 +737,7 @@ html {
 }
 
 .about-image img {
-  width: 320px; /* Aumenta a imagem */
+  width: 30rem !important;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(15, 182, 57, 0.7);
