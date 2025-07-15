@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Dev Souza</title>
+        <title>Dev.Souza</title>
         <meta name="description" content="">
         <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios/50/developer--v1.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -17,7 +17,7 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-transparent navbar-dark custom-navbar sticky-navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#home">Moises.Dev</a>
+      <a class="navbar-brand" href="#home">Dev.Souza</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -64,7 +64,6 @@
         <h3 class="typewriter-container">
             <span class="fixed-text">I am</span> <span id="typewriter" class="typewriter"></span>
         </h3>
-
         <p class="hero__text">
             Hello, I’m Moises Souza, a passionate web developer dedicated to creating amazing digital experiences.
             Here you will find a selection of my most recent and interesting projects.
@@ -78,7 +77,6 @@
     <h2 class="text-center mb-4">Skills</h2>
     <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
       <div class="carousel-inner">
-
         <!-- Slide 1 -->
         <div class="carousel-item active">
           <div class="d-flex justify-content-center gap-5 flex-wrap">
@@ -100,7 +98,6 @@
             </div>
           </div>
         </div>
-
         <!-- Slide 2 -->
         <div class="carousel-item">
           <div class="d-flex justify-content-center gap-5 flex-wrap">
@@ -122,7 +119,6 @@
             </div>
           </div>
         </div>
-
         <!-- Slide 3 -->
         <div class="carousel-item">
           <div class="d-flex justify-content-center gap-5 flex-wrap">
@@ -144,7 +140,6 @@
             </div>
           </div>
         </div>
-
         <!-- Slide 4 -->
         <div class="carousel-item">
           <div class="d-flex justify-content-center gap-5 flex-wrap">
@@ -167,7 +162,6 @@
           </div>
         </div>
       </div>
-
       <!-- Controles do Carousel -->
       <button class="carousel-control-prev" type="button" data-bs-target="#skillsCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -181,19 +175,14 @@
   </div>
 </section>
 
-
-
 <section id="projects" class="projects">
     <h1 class="text-center my_projects_titles">My projects</h1>
     <h3 class="text-center featured_projects_title">Featured Projects</h3>
     <div class="container-display">
       {% for feat in featured_projects %}
         {% if feat %}
-          <div class="panel" style="background-image: url('{{ feat.image.url }}');">
-            <p>{{ feat.description }}</p>  
-            <a href="{% url 'project_detail' feat.id %}">
-              <h3>{{ feat.title }}</h3>
-            </a>
+          <div class="panel" style="background-image: url('{{ feat.image.url }}');"> 
+            <h3>{{ feat.title }}</h3>
           </div>
         {% else %}
           <p>No Projects Available</p>
@@ -204,7 +193,6 @@
 
 <section id="projects" class="projects-section">
   <h2 class="text-center my_projects_titles">Custom Projects</h2>
-
   <!-- Filter Buttons -->
   <div class="category-filter text-center mb-4">
     <button class="filter-btn active" data-category="all">All</button>
@@ -217,7 +205,6 @@
     <button class="filter-btn" data-category="data-analysis">Data Analysis</button>
     <button class="filter-btn" data-category="cybersecurity">CyberSecurity</button>
   </div>
-
   <!-- Project Cards -->
 <div class="project-grid container">
   <div class="project-card" data-category="fullstack">
@@ -226,56 +213,48 @@
     <p class="project-description">Loja virtual completa com Django, carrinho, painel admin e integração de pagamento.</p>
     <a href="/projects/django-ecommerce" class="project-button">Ver detalhes</a>
   </div>
-
   <div class="project-card" data-category="frontend">
     <img src="https://img.freepik.com/vetores-gratis/fundo-realista-em-estilo-futurista_23-2149129125.jpg?semt=ais_hybrid&w=740" alt="React Portfolio" class="project-thumbnail">
     <h4>React Portfolio</h4>
     <p class="project-description">Portfólio responsivo em React, com animações e filtro de projetos por categoria.</p>
     <a href="/projects/react-portfolio" class="project-button">Ver detalhes</a>
   </div>
-
   <div class="project-card" data-category="backend">
     <img src="https://img.freepik.com/vetores-gratis/fundo-realista-em-estilo-futurista_23-2149129125.jpg?semt=ais_hybrid&w=740" alt="API with Node.js" class="project-thumbnail">
     <h4>API com Node.js e PostgreSQL</h4>
     <p class="project-description">RESTful API com autenticação JWT, CRUD e banco relacional PostgreSQL.</p>
     <a href="/projects/node-api" class="project-button">Ver detalhes</a>
   </div>
-
   <div class="project-card" data-category="mobile">
     <img src="https://img.freepik.com/vetores-gratis/fundo-realista-em-estilo-futurista_23-2149129125.jpg?semt=ais_hybrid&w=740" alt="React Native Store App" class="project-thumbnail">
     <h4>App Loja React Native</h4>
     <p class="project-description">Aplicativo mobile com carrinho, filtros e integração de produtos via API.</p>
     <a href="/projects/react-native-store" class="project-button">Ver detalhes</a>
   </div>
-
   <div class="project-card" data-category="scraping">
     <img src="https://img.freepik.com/vetores-gratis/fundo-realista-em-estilo-futurista_23-2149129125.jpg?semt=ais_hybrid&w=740" alt="Web Scraper" class="project-thumbnail">
     <h4>Scraper com BeautifulSoup</h4>
     <p class="project-description">Extração de dados de sites com Python, requests e BeautifulSoup.</p>
     <a href="/projects/web-scraper-bs4" class="project-button">Ver detalhes</a>
   </div>
-
   <div class="project-card" data-category="bots">
     <img src="https://img.freepik.com/vetores-gratis/fundo-realista-em-estilo-futurista_23-2149129125.jpg?semt=ais_hybrid&w=740" alt="Telegram Bot" class="project-thumbnail">
     <h4>Bot para Telegram</h4>
     <p class="project-description">Bot interativo com comandos personalizados e integração com APIs externas.</p>
     <a href="/projects/telegram-bot" class="project-button">Ver detalhes</a>
   </div>
-
   <div class="project-card" data-category="scraping">
     <img src="https://img.freepik.com/vetores-gratis/fundo-realista-em-estilo-futurista_23-2149129125.jpg?semt=ais_hybrid&w=740" alt="RPA Selenium" class="project-thumbnail">
     <h4>Automação com Selenium</h4>
     <p class="project-description">RPA para automatizar tarefas repetitivas no navegador com Python e Selenium.</p>
     <a href="/projects/rpa-selenium" class="project-button">Ver detalhes</a>
   </div>
-
   <div class="project-card" data-category="data-analysis">
       <img src="https://img.freepik.com/vetores-gratis/fundo-realista-em-estilo-futurista_23-2149129125.jpg?semt=ais_hybrid&w=740" class="project-thumbnail">
       <h4>Data Analysis Dashboard</h4>
       <p class="project-description">Dashboard interativo com Python, Pandas, Plotly e Streamlit para visualização de dados em tempo real.</p>
       <a href="/projects/data-analysis-dashboard" class="project-button">Ver detalhes</a>
   </div>
-
   <div class="project-card" data-category="cybersecurity">
       <img src="https://img.freepik.com/vetores-gratis/fundo-realista-em-estilo-futurista_23-2149129125.jpg?semt=ais_hybrid&w=740" class="project-thumbnail">
       <h4>Port Scanner</h4>

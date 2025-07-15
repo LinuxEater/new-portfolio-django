@@ -312,6 +312,7 @@ html {
   gap: 20px;
   justify-content: center;
 }
+
 /* Animação */
 @keyframes fadeInUp {
   from {
@@ -379,9 +380,7 @@ html {
   background-color: #0ca530;
 }
 
-
 /* services section */
-
 .services-section {
     margin-top: 2rem;
     padding: 80px 20px;
@@ -647,10 +646,7 @@ html {
   margin-bottom: 8px;
 }
 
-
 /* Projects Single detail Page */
-
-
 .project-detail {
     max-width: 900px;
     margin: 3.5rem auto;

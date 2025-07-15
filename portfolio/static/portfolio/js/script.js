@@ -140,6 +140,6 @@ const navBrand = document.querySelector('.navbar-brand');
 if (navBrand) {
   navBrand.addEventListener('click', function(event) {
     event.preventDefault();
-    alert("Lets change the word together!");
+    alert("Lets Change The World Together!");
   });
 }

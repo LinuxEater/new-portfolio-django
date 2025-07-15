@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block content %}
 <header>
   <nav class="navbar navbar-expand-lg bg-transparent navbar-dark custom-navbar sticky-navbar">
@@ -44,8 +43,9 @@
 
 <section class="budget-section">
   <div class="budget-card">
-    
-    <h2><i class="fas fa-file-invoice-dollar"></i> Request a Budget</h2>
+    <h2>Request a Budget</h2>
+    <h2>or</h2>
+    <h2>Hire me</h2>
     <p>Fill in the form below and I’ll get back to you shortly. No obligation, totally free.</p>
 
     <!-- Lista de instruções -->
@@ -55,11 +55,8 @@
       <li>Mention any specific technologies if you have a preference.</li>
       <li>Let me know your budget range (optional).</li>
     </ul>
-
-
     <form method="post" action="#">
       {% csrf_token %}
-
       <div class="form-group">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Your full name" required>
