@@ -56,11 +56,12 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 
 // Typewriter effect for hero section
 const roles = [
+  "Software Engineer",
   "Full Stack Developer",
   "UX/UI Designer",
   "Back End Developer",
-  "Software Engineer",
-  "Front End Developer"
+  "Front End Developer",
+  "RPA Developer"
 ];
 
 const typewriterElement = document.getElementById("typewriter");
@@ -136,10 +137,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // nav brand
 
-const navBrand = document.querySelector('.navbar-brand');
-if (navBrand) {
-  navBrand.addEventListener('click', function(event) {
-    event.preventDefault();
-    alert("Lets Change The World Together!");
-  });
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const navBrand = document.querySelector('.navbar-brand');
+  if (navBrand) {
+    navBrand.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      // Se quiser usar o modal:
+      const modal = document.getElementById('brandModal');
+      if (modal) {
+        const bsModal = new bootstrap.Modal(modal);
+        bsModal.show();
+      }
+
+      // Se preferir só o alert (remova o bloco do modal acima):
+      // alert("Let's Change The World Together!");
+    });
+  }
+});
