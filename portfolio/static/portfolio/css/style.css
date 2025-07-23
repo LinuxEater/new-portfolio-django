@@ -170,8 +170,10 @@ html {
     text-align: center;
     padding-top: 1rem;
     padding-bottom: .75rem;
+    font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
+    color: var(--color-gray);
 }
 
 .text-center p{
@@ -265,7 +267,7 @@ html {
   padding: 10px 20px;
 }
 
-/* Quando o card estiver aberto, mostre os <p> e <a> */
+
 .panel.active p,
 .panel.active a {
   opacity: 1;
@@ -294,10 +296,13 @@ html {
 }
 
 .my_projects_titles{
+    margin-top: 5rem;
     padding-top: 2rem;
+    margin-bottom: 2rem;
     font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
+    color: var(--color-gray);
 }
 
 .featured_projects_title{
@@ -306,6 +311,7 @@ html {
     font-weight: 700;
     text-transform: capitalize;
     text-decoration: underline;
+    color: var(--color-gray);
 }
 
 /*-- all projects --*/
@@ -532,6 +538,10 @@ html {
   margin-bottom: 10px;
 }
 
+.footer-left p{
+  color: var(--color-white);
+}
+
 .footer-links h5,
 .footer-social h5 {
   margin-bottom: 10px;
@@ -553,7 +563,10 @@ html {
 }
 
 .footer-links ul li a:hover {
-  text-decoration: underline;
+  color: #0fb639;
+  transform: scale(1.2rem);
+  border-radius: 9999px;
+  transition: .5s ease-in-out;
 }
 
 .social-icons a {
